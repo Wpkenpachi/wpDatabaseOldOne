@@ -93,7 +93,7 @@ $r->select('users')->where('id', '>' , 1);
 ```
 Nota: Usar apenas 2 argumentos é equivalente a dizer que o  `'argumento1 = argumento2'`. 3 argumentos, lhe da a liberdade de especificar o operador assim como é feito no exemplo acima.
 
-PS: O `where()` é utilizado dessa mesma forma com as outras querys
+PS: O `where()` é utilizado dessa mesma forma também com as outras querys
 
 ## Tipos de Condição ( WHERE )
 
@@ -253,7 +253,7 @@ $c->create('users', ['nome' => 'John', 'idade' => 20])->lastInsertId();
 
 ## Debug
 
-Se você quiser testar como está ficando a sintaxe da sua quer você pode utilizar o método returnWhere().
+Se você quiser testar como está ficando a sintaxe da sua query você pode utilizar o método returnWhere().
 
 ```php
 $r->select('users')->where()->andWhere(['nome', 'wesley'] , ['id', '>', 1])->returnWhere();
