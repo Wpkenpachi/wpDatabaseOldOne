@@ -38,6 +38,7 @@ O create() recebe 2 parâmetros:
 > Segundo: Um array com os dados a serem insetidos.
 ```php
 create('tableName', ['nome' => 'Name', 'age' => 20]);
+// INSERT INTO tableName (nome, age) VALUES ('Name', '20')
 ```
 
 O select() recebe 2 parâmetros:
@@ -57,7 +58,7 @@ O update() recebe 2 parâmetros:
 
 ```php
 update('tableName', ['nome' => 'Wesley']);
-// UPDATE tableName SET 
+// UPDATE tableName SET (nome) VALUES ('Wesley')
 ```
 
 O delete() recebe 1 parametro:
@@ -74,6 +75,7 @@ da query que pretende utilizar, segue o exemplo:
 
 O metodo where(), adiciona a palavra chave WHERE e a condicional na string da query, caso esta seja passada.
 ```php
+// A primeira coisa a se fazer é instanciar um objeto da classe wpDatabase
 $r = new wpDatabase;
 ```
 
