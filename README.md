@@ -23,10 +23,10 @@ são as do CRUD _(Create , Read, Update, Delete)_ e com o WPDatabase
 essas operações podem ser feitas de forma bem simples. Segue a sintaxe:
 
 ```php
-$create->create('table', ['nome' => 'Name', 'age' => 20]);
-$read->select('table', ' * ');
-$update->update('table', ['nome' => 'NameUpdated', 'age' => 22]);
-$delete->delete('table');
+$create->create('tableName', ['nome' => 'Name', 'age' => 20]);
+$read->select('tableName', ' * ');
+$update->update('tableName', ['nome' => 'NameUpdated', 'age' => 22]);
+$delete->delete('tableName');
 ```
 ## CRUD Parâmetros
 
@@ -37,7 +37,7 @@ O create() recebe 2 parâmetros:
 
 > Segundo: Um array com os dados a serem insetidos.
 ```php
-create('table', ['nome' => 'Name', 'age' => 20]);
+create('tableName', ['nome' => 'Name', 'age' => 20]);
 ```
 
 O select() recebe 2 parâmetros:
@@ -46,8 +46,8 @@ O select() recebe 2 parâmetros:
 > (Opcional) Segundo: Uma string, com os dados do registro que você quer retornar, caso você não os especifique, o valor padrão é " * ".
 
 ```php
-select('table', 'nome,email');
-// SELECT nome,email FROM table
+select('tableName', 'nome,email');
+// SELECT nome,email FROM tableName
 ```
 
 O update() recebe 2 parâmetros:
@@ -56,15 +56,15 @@ O update() recebe 2 parâmetros:
 > Segundo: Um array com os dados de atualização.
 
 ```php
-update('table', ['nome' => 'Wesley']);
-// UPDATE table SET 
+update('tableName', ['nome' => 'Wesley']);
+// UPDATE tableName SET 
 ```
 
 O delete() recebe 1 parametro:
 > Primeiro: Uma string, com o nome da tabela que será afetada.
 
 ```php
-delete('table');
+delete('tableName');
 ```
 ## Condição ( WHERE )
 
