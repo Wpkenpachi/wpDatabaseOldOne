@@ -112,7 +112,7 @@ $r->select('users')->where('id', 1)->and('id', 2);
 $r->select('users')->where('id', 1)->and('id','<', 5);
 // SELECT * FROM users WHERE id = 1 AND id < 5
 ```
-PS: **Todos os argumentos passados devem ser arrays**
+
 
 ### Operador **or ( )**
 O operador and, adiciona a palavra chave OR e os argumentos na string da query, caso estes sejam passados.
@@ -141,7 +141,6 @@ $r->select('users')->where('id', 1)->not('id', 2);
 $r->select('users')->where('id', 1)->not('id','<', 5);
 // SELECT * FROM users WHERE id = 1 NOT id < 5
 ```
-PS: **Todos os argumentos passados devem ser arrays**
 
 ### Operador **andWhere ( )**
 O metodo andWhere além de adicionar o operador AND na string da query, ainda coloca os argumentos entre parenteses.
