@@ -171,7 +171,6 @@ $r->select('users')->customWhere();
 $r->select('users')->where('id', 2)->customWhere("AND (nome = 'wesley' OR pass = 213)");
 // SELECT * FROM users WHERE id = 2 AND (nome = 'wesley' OR pass = 213)
 ```
-PS: **Todos os argumentos passados devem ser arrays**
 
 ## Delimitador
 
