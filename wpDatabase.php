@@ -1,5 +1,5 @@
 <?php
-
+include 'config.php';
 class WPDatabase {
 
     protected static $Conn;
