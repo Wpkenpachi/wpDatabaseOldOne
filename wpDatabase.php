@@ -33,7 +33,7 @@ class WPDatabase {
                 $this->StringQuery = "SELECT {$this->Options} FROM {$this->Table} {$this->Where} {$this->Limit} {$this->OrderBy}";
                 break;
 
-            case 'insert':
+            case 'create':
                 // INSERT INTO table (column1, column2) VALUES (value1, value2)
                 $this->StringQuery = "INSERT INTO {$this->Table} {$this->Insert}";
                 break;
@@ -58,7 +58,7 @@ class WPDatabase {
         $this->Options = $options;
         return $this;
     }
-    public function insert($table, array $dados){
+    public function create($table, array $dados){
         $this->Operation = 'insert';
         foreach($dados as $key => $value){
             $new_data[$key] = "'{$value}'";
