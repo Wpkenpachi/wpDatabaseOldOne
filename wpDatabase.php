@@ -59,7 +59,7 @@ class WPDatabase {
         return $this;
     }
     public function create($table, array $dados){
-        $this->Operation = 'insert';
+        $this->Operation = 'create';
         foreach($dados as $key => $value){
             $new_data[$key] = "'{$value}'";
         }
