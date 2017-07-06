@@ -30,7 +30,7 @@ class WPDatabase {
 
         switch($this->Operation){
             case 'select':
-                $this->StringQuery = "SELECT {$this->Options} FROM {$this->Table} {$this->Where} {$this->Limit} {$this->OrderBy}";
+                $this->StringQuery = "SELECT {$this->Options} FROM {$this->Table} {$this->Where} {$this->OrderBy} {$this->Limit}";
                 break;
 
             case 'create':
@@ -40,14 +40,15 @@ class WPDatabase {
 
             case 'update':
                 // UPDATE table SET column1 = value1, column2 = value2 WHERE id = 1
-                $this->StringQuery = "UPDATE {$this->Table} {$this->Update} {$this->Where} {$this->Limit} {$this->OrderBy}";
+                $this->StringQuery = "UPDATE {$this->Table} {$this->Update} {$this->Where} {$this->OrderBy} {$this->Limit}";
                 break;
 
             case 'delete':
                 // DELETE FROM table WHERE id = 1
-                $this->StringQuery = "DELETE FROM {$this->Table} {$this->Where} {$this->Limit} {$this->OrderBy}";
+                $this->StringQuery = "DELETE FROM {$this->Table} {$this->Where} {$this->OrderBy} {$this->Limit}";
                 break;
         }
+        echo $this->StringQuery;//die();
         $this->preparing();
     }
 
@@ -218,7 +219,7 @@ class WPDatabase {
         $args = func_get_args();
         
         foreach($args as $arg){
-            if(!is_array($args)){
+            if(!is_array($arg)){
                 throw new Exception('Args Error: '.__FUNCTION__.'() Expecting type Array for your parameters');
             }elseif(count($arg) > 3 || count($arg) < 2){
             throw new Exception('Args Error: '.__FUNCTION__."() Expecting an array with 3 values where you put {$arg}");
@@ -295,7 +296,7 @@ class WPDatabase {
 
     // Debbug methods
     public function returnWhere(){
-        echo $this->Where;
+            echo $this->Where;
     }
 
 }
